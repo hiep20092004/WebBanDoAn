@@ -1,0 +1,201 @@
+/* --- CSS RIÊNG CHO TRANG DANH MỤC (GREEN THEME) --- */
+
+:root {
+    /* MÀU CHỦ ĐẠO: XANH FOREST */
+    --brand-color: rgb(0, 102, 51);
+    /* MÀU NỀN NHẠT (Dùng cho nút phụ, hover): Xanh rất nhạt */
+    --brand-light: rgba(0, 102, 51, 0.08); 
+    --text-dark: #222;
+    --gray-border: #eee;
+}
+
+/* 1. Page Title */
+.page-title {
+    font-family: 'Roboto', sans-serif;
+    color: var(--brand-color); /* Đổi tiêu đề sang xanh cho sang */
+    letter-spacing: -0.5px;
+}
+
+/* 2. Filter Toolbar Buttons (Nút Lọc) */
+.btn-custom-tab {
+    background-color: #fff;
+    border: 1px solid var(--gray-border);
+    color: #555;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+/* Active Tab: Nền Xanh */
+.btn-custom-tab.active, .btn-custom-tab:hover {
+    background-color: var(--brand-color);
+    color: #fff;
+    border-color: var(--brand-color);
+    box-shadow: 0 4px 10px rgba(0, 102, 51, 0.2); /* Bóng xanh */
+}
+
+.btn-outline-custom {
+    background-color: #fff;
+    border: 1px solid var(--gray-border);
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+.btn-outline-custom:hover {
+    border-color: var(--brand-color);
+    color: var(--brand-color);
+    background-color: var(--brand-light);
+}
+
+/* 3. Result Count */
+.result-count { color: #666; font-size: 16px; }
+.result-count .text-highlight {
+    color: var(--brand-color) !important;
+    font-weight: bold;
+}
+
+/* 4. CARD MÓN ĂN (STYLE MỚI - XANH) */
+.food-card-detail {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.food-card-detail:hover {
+    transform: translateY(-5px);
+}
+
+/* Ảnh & Bo góc */
+.food-card-detail .card-img-box {
+    border-radius: 20px;
+    overflow: hidden;
+    height: 220px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.food-card-detail .card-img-top {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.5s;
+}
+.food-card-detail:hover .card-img-top { transform: scale(1.05); }
+
+/* LOGO GÓC TRÁI (NỀN XANH) */
+/* Lưu ý: Nếu HTML bạn vẫn để class badge-logo-red, code này sẽ đè lại thành xanh */
+.badge-logo-red, .badge-logo-green {
+    position: absolute; top: 10px; left: 10px;
+    width: 45px; height: 45px;
+    background-color: var(--brand-color); /* Chuyển thành Xanh */
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+.badge-logo-red img, .badge-logo-green img { 
+    width: 30px; 
+    filter: brightness(0) invert(1); /* Logo trắng */ 
+}
+
+/* NÚT TIM GÓC PHẢI */
+.btn-heart-grey {
+    position: absolute; top: 10px; right: 10px;
+    width: 40px; height: 40px;
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 50%; border: none;
+    display: flex; align-items: center; justify-content: center;
+    color: #999;
+    font-size: 18px; transition: 0.3s;
+    z-index: 2;
+}
+.btn-heart-grey:hover { 
+    background-color: #fff; 
+    color: var(--brand-color); /* Tim chuyển xanh khi hover */
+    transform: scale(1.1);
+}
+
+/* TIÊU ĐỀ & LIKE */
+.food-card-detail .card-title {
+    font-size: 18px; line-height: 1.3; margin-top: 10px;
+    transition: 0.3s;
+}
+.food-card-detail:hover .card-title {
+    color: var(--brand-color); /* Hover tiêu đề chuyển xanh */
+}
+
+.like-badge {
+    border: 1px solid #eee; background: #fff;
+    border-radius: 20px; padding: 2px 10px;
+    font-size: 13px; font-weight: 600; color: #555;
+}
+.like-badge i { color: var(--brand-color); } /* Tim nhỏ màu xanh */
+
+/* TAGS THÔNG TIN */
+.info-tag {
+    display: inline-flex; align-items: center;
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 13px; color: #444;
+    font-weight: 500;
+}
+.info-tag i {
+    color: var(--brand-color); /* Icon màu xanh */
+    margin-right: 6px;
+}
+
+/* NÚT XEM CHI TIẾT (QUAN TRỌNG) */
+/* Đổi từ Hồng/Đỏ -> Xanh Nhạt/Xanh Đậm */
+.btn-detail-pink, .btn-detail-green {
+    background-color: var(--brand-light); /* Nền xanh siêu nhạt */
+    color: var(--brand-color); /* Chữ xanh đậm */
+    font-weight: 700;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 12px;
+    border: none;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    width: 100%;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+.btn-detail-pink:hover, .btn-detail-green:hover {
+    background-color: var(--brand-color); /* Hover nền xanh đậm */
+    color: #fff; /* Chữ trắng */
+    box-shadow: 0 4px 10px rgba(0, 102, 51, 0.2);
+}
+
+/* 5. PHÂN TRANG (PAGINATION - GREEN) */
+.pagination-modern .page-item { margin: 0 5px; }
+
+.pagination-modern .page-link {
+    width: 45px; height: 45px;
+    border-radius: 50% !important;
+    border: 1px solid #eee;
+    color: #555;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 16px;
+    background-color: #fff;
+    transition: all 0.3s;
+}
+
+/* Hover Pagination */
+.pagination-modern .page-link:hover {
+    background-color: var(--brand-light); /* Nền xanh nhạt */
+    color: var(--brand-color); /* Chữ xanh */
+    border-color: var(--brand-light);
+    transform: translateY(-3px);
+}
+
+/* Active Pagination (Trang hiện tại) */
+.pagination-modern .page-item.active .page-link {
+    background-color: var(--brand-color); /* Nền xanh đậm */
+    color: #fff;
+    border-color: var(--brand-color);
+    box-shadow: 0 4px 15px rgba(0, 102, 51, 0.3);
+}
+
+.pagination-modern .page-item.disabled .page-link {
+    background-color: #f9f9f9; color: #ccc; border-color: #f0f0f0;
+}
