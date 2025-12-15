@@ -11,7 +11,7 @@
 
 /* 1. Page Title */
 .page-title {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Barlow Condensed';
     color: var(--brand-color); /* Đổi tiêu đề sang xanh cho sang */
     letter-spacing: -0.5px;
 }

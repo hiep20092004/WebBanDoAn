@@ -1,0 +1,267 @@
+/* --- CSS SETUP --- */
+:root {
+    --primary-color: #166534; /* Màu xanh đậm */
+    --accent-color: #22c55e;  /* Màu xanh lá sáng */
+    --bg-light: #f3f4f6;
+    --text-dark: #1f2937;
+    --white: #ffffff;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --radius: 12px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Be Vietnam Pro', sans-serif; background-color: #f9fafb; color: var(--text-dark); padding: 20px; }
+
+/* --- Header & Filters --- */
+.section-title { text-align: center; color: var(--primary-color); text-transform: uppercase; font-size: 2rem; margin-bottom: 20px; font-weight: 800; }
+
+/* 1. Container bao ngoài: Căn giữa mọi thứ theo chiều dọc */
+.filter-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.filter-label { font-weight: bold; display: flex; align-items: center; gap: 5px; }
+.btn-filter {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    background: var(--white);
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+.btn-filter.active { background-color: var(--primary-color); color: var(--white); border-color: var(--primary-color); }
+.btn-filter:hover:not(.active) { background-color: #e5e7eb; }
+/* --- MAIN PLANNER LAYOUT --- */
+.planner-wrapper {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+/* Cột nhãn bên trái (Sáng, Trưa, Tối) */
+.row-labels {
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px; /* Khớp với khoảng trống header của card */
+    gap: 15px; /* Khoảng cách giữa các bữa ăn */
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+.label-text {
+    height: 140px; /* Chiều cao khớp với thẻ món ăn */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-weight: 700;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+/* Swiper Container */
+.swiper {
+    width: 100%;
+    padding-bottom: 20px !important;
+}
+
+/* Style cho từng Cột Thực Đơn (Slide) */
+.menu-col {
+    background: #f8f9fa;
+    border-radius: var(--radius);
+    padding: 10px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+/* Hiệu ứng active */
+.menu-col.highlighted {
+    background: #f0fdf4;
+    border: 1px solid var(--accent-color);
+}
+
+.menu-header {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+    background: #e5e7eb;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 0.9rem;
+}
+.menu-col.highlighted .menu-header {
+    background: #dcfce8;
+    color: var(--primary-color);
+}
+
+/* Các món ăn trong cột */
+/* --- Sửa lại phần Card Món Ăn (Meal Card) --- */
+
+/* --- Sửa lại Card nhỏ gọn --- */
+
+.meal-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f0f0f0;
+    text-align: center;
+    
+    /* --- PHẦN QUAN TRỌNG MỚI THÊM --- */
+    max-width: 110px; /* Giới hạn chiều rộng tối đa (cỡ 100-110px là đẹp như ảnh) */
+    width: 100%;      /* Co giãn linh hoạt nhưng không vượt quá max-width */
+    margin: 20px auto;   /* Căn giữa thẻ card trong cột */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.meal-img {
+    width: 100%;
+    
+    /* Chỉnh lại chiều cao hoặc tỉ lệ ảnh cho cân đối với chiều rộng mới */
+    aspect-ratio: 4/3; /* Tự động tính chiều cao theo tỉ lệ chuẩn (hoặc để height: 70px) */
+    background-color: #9ca3af;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    object-fit: cover;
+}
+
+.meal-name {
+    font-size: 0.85rem; /* Giảm cỡ chữ chút xíu cho vừa vặn */
+    font-weight: 700;
+    color: #1f2937;
+    line-height: 1.2;
+    white-space: nowrap; /* Giữ tên món trên 1 dòng */
+    overflow: hidden;    /* Ẩn chữ thừa nếu dài quá */
+    text-overflow: ellipsis; /* Thêm dấu "..." nếu tên dài */
+}
+
+/* --- Custom Navigation Buttons --- */
+.swiper-button-next, .swiper-button-prev {
+    color: var(--white) !important;
+    background: var(--primary-color);
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 18px !important;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .planner-wrapper { padding: 10px; }
+    .row-labels { width: 30px; }
+    .label-text { font-size: 0.7rem; }
+    .section-title { font-size: 1.5rem; }
+}
+/* --- CẬP NHẬT LAYOUT NÚT BẤM RA NGOÀI --- */
+
+/* 1. Tạo container bao quanh để làm mốc tọa độ (relative) */
+.outer-wrapper {
+    position: relative;
+    max-width: 1300px; /* Rộng hơn planner-wrapper một chút để chứa nút */
+    margin: 0 auto;
+    padding: 0 50px; /* Tạo khoảng trống 2 bên cho nút bấm nằm vào */
+}
+
+/* 2. Chỉnh lại Planner Wrapper (Card trắng) */
+.planner-wrapper {
+    /* Giữ nguyên các thuộc tính cũ */
+    display: flex;
+    background: var(--white);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    /* Bỏ margin cũ đi vì outer-wrapper đã căn giữa rồi */
+    margin: 0; 
+    width: 100%;
+}
+
+/* 3. Style lại nút bấm Custom */
+.custom-nav-btn {
+    color: var(--white) !important;
+    background: var(--primary-color);
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s, background-color 0.2s;
+    
+    /* Định vị tuyệt đối so với .outer-wrapper */
+    position: absolute !important;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+/* Hover effect cho nút đẹp hơn */
+.custom-nav-btn:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-50%) scale(1.1); /* Phóng to nhẹ khi hover */
+}
+
+/* Icon mũi tên bên trong */
+.custom-nav-btn::after {
+    font-size: 18px !important;
+    font-weight: bold;
+}
+
+/* 4. Định vị cụ thể Trái - Phải */
+.swiper-button-prev.custom-nav-btn {
+    left: 0; /* Nằm sát mép trái của outer-wrapper */
+}
+
+.swiper-button-next.custom-nav-btn {
+    right: 0; /* Nằm sát mép phải của outer-wrapper */
+}
+
+/* --- RESPONSIVE --- */
+/* Xử lý khi màn hình nhỏ (Mobile/Tablet) */
+@media (max-width: 1350px) {
+    /* Khi màn hình không đủ rộng, thu hẹp khoảng cách padding */
+    .outer-wrapper {
+        max-width: 100%;
+        padding: 0 10px; /* Giảm padding */
+    }
+    
+    /* Lúc này nút sẽ đè lên card một chút (như cũ) để không bị mất */
+    .custom-nav-btn {
+        width: 35px !important;
+        height: 35px !important;
+    }
+    
+    .swiper-button-prev.custom-nav-btn {
+        left: -5px; /* Đẩy nhẹ ra mép */
+    }
+    .swiper-button-next.custom-nav-btn {
+        right: -5px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile: Ẩn nút luôn, dùng tay vuốt (Swipe) sướng hơn */
+    .custom-nav-btn {
+        display: none !important;
+    }
+    
+    .outer-wrapper {
+        padding: 0 10px;
+    }
+}

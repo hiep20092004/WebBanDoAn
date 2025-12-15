@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bánh Hẹ Chiên Giòn - Món Ngon Mỗi Ngày</title>
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link rel="stylesheet" href="/CSS/style.css"> <link rel="stylesheet" href="/CSS/DanhMucThucDon.css"> <link rel="stylesheet" href="/CSS/xemchitiet.css"> </head>
-<body class="bg-light">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/DanhMucThucDon.css">
+    <link rel="stylesheet" href="/CSS/xemchitiet.css">
+</head>
+
+<body>
 
     <div id="top-section-placeholder2"></div>
 
     <section class="container py-5">
         <div class="row">
-            
+
             <div class="col-lg-8">
-                
+
                 <div class="bg-white rounded-4 shadow-sm p-4 mb-4 position-relative overflow-hidden">
                     <h1 class="recipe-title mb-3">Sườn chay chiên nước mắm</h1>
-                    
+
                     <div class="recipe-meta d-flex flex-wrap gap-3 mb-4 text-muted small">
                         <span class="meta-item"><i class="fas fa-clock text-brand me-2"></i>15 Phút</span>
                         <span class="meta-item"><i class="fas fa-user-friends text-brand me-2"></i>2 Người ăn</span>
@@ -28,17 +33,31 @@
                         <span class="meta-item"><i class="fas fa-star text-warning me-1"></i>4.8 (120 đánh giá)</span>
                     </div>
 
-                    <div class="main-image-box mb-4 position-relative">
-                        <img src="Image/Món ăn/Sườn chay chiên nước mắm.JPG" class="img-fluid rounded-3 w-100" alt="Sườn chay chiên nước mắm">
-                        <a href="#" class="play-btn-overlay">
-                            <i class="fas fa-play"></i>
-                        </a>
+                    <div class="main-video-box mb-4 position-relative rounded-4 overflow-hidden shadow-sm">
+
+                        <video id="recipeVideo" class="w-100 h-100" controls preload="metadata"
+                            poster="/Image/Món ăn/Sườn non chiên sả ớt.JPG">
+
+                            <source src="/Video/2025-12-07 05-00-33.mp4" type="video/mp4">
+
+                            Trình duyệt của bạn không hỗ trợ thẻ video.
+                        </video>
+
+                        <div class="custom-play-overlay">
+                            <div class="play-circle">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+
                     </div>
 
                     <div class="d-flex gap-2">
-                        <button class="btn btn-brand rounded-pill px-4"><i class="fas fa-heart me-2"></i>Lưu công thức</button>
-                        <button class="btn btn-outline-brand rounded-pill px-4"><i class="fas fa-share-alt me-2"></i>Chia sẻ</button>
-                        <button class="btn btn-outline-brand rounded-pill px-4"><i class="fas fa-print me-2"></i>In</button>
+                        <button class="btn btn-brand rounded-pill px-4"><i class="fas fa-heart me-2"></i>Lưu công
+                            thức</button>
+                        <button class="btn btn-outline-brand rounded-pill px-4"><i
+                                class="fas fa-share-alt me-2"></i>Chia sẻ</button>
+                        <button class="btn btn-outline-brand rounded-pill px-4"><i
+                                class="fas fa-print me-2"></i>In</button>
                     </div>
                 </div>
 
@@ -47,44 +66,49 @@
                         <div class="section-icon me-3"><i class="fas fa-shopping-basket"></i></div>
                         <h4 class="fw-bold text-brand m-0">Nguyên Liệu Chuẩn Bị</h4>
                     </div>
-                    
+
                     <div class="ingredient-list">
-    
+
                         <div class="ingredient-item d-flex align-items-center">
                             <input class="custom-checkbox me-3" type="checkbox" id="ing1">
-                            <label class="d-flex justify-content-between align-items-center w-100 cursor-pointer" for="ing1">
+                            <label class="d-flex justify-content-between align-items-center w-100 cursor-pointer"
+                                for="ing1">
                                 <span class="ing-name">Sườn non chay </span>
                                 <span class="ing-qty fw-bold text-dark">2 miếng</span>
                             </label>
                         </div>
-                    
+
                         <div class="ingredient-item d-flex align-items-center">
                             <input class="custom-checkbox me-3" type="checkbox" id="ing2">
-                            <label class="d-flex justify-content-between align-items-center w-100 cursor-pointer" for="ing2">
+                            <label class="d-flex justify-content-between align-items-center w-100 cursor-pointer"
+                                for="ing2">
                                 <span class="ing-name">Sả </span>
                                 <span class="ing-qty fw-bold text-dark">1 nhánh</span>
                             </label>
                         </div>
-                    
+
                         <div class="ingredient-item d-flex align-items-center">
                             <input class="custom-checkbox me-3" type="checkbox" id="ing3">
-                            <label class="d-flex justify-content-between align-items-center w-100 cursor-pointer" for="ing3">
+                            <label class="d-flex justify-content-between align-items-center w-100 cursor-pointer"
+                                for="ing3">
                                 <span class="ing-name">Ớt</span>
                                 <span class="ing-qty fw-bold text-dark">1 trái</span>
                             </label>
                         </div>
-                    
+
                         <div class="ingredient-item d-flex align-items-center">
                             <input class="custom-checkbox me-3" type="checkbox" id="ing4">
-                            <label class="d-flex justify-content-between align-items-center w-100 cursor-pointer" for="ing4">
+                            <label class="d-flex justify-content-between align-items-center w-100 cursor-pointer"
+                                for="ing4">
                                 <span class="ing-name">Nước mắm chay</span>
                                 <span class="ing-qty fw-bold text-dark">1 muỗng canh</span>
                             </label>
                         </div>
-                    
+
                         <div class="ingredient-item d-flex align-items-center">
                             <input class="custom-checkbox me-3" type="checkbox" id="ing5">
-                            <label class="d-flex justify-content-between align-items-center w-100 cursor-pointer" for="ing5">
+                            <label class="d-flex justify-content-between align-items-center w-100 cursor-pointer"
+                                for="ing5">
                                 <span class="ing-name">Dầu ăn</span>
                                 <span class="ing-qty fw-bold text-dark">100ml</span>
                             </label>
@@ -92,14 +116,15 @@
 
                         <div class="ingredient-item d-flex align-items-center">
                             <input class="custom-checkbox me-3" type="checkbox" id="ing5">
-                            <label class="d-flex justify-content-between align-items-center w-100 cursor-pointer" for="ing5">
+                            <label class="d-flex justify-content-between align-items-center w-100 cursor-pointer"
+                                for="ing5">
                                 <span class="ing-name">Gia vị thông dụng</span>
                                 <span class="ing-qty fw-bold text-dark">1 ít</span>
                             </label>
                         </div>
-                    
+
                     </div>
-                    
+
                     <div class="alert alert-success bg-green-light border-0 mt-3 mb-0">
                         <i class="fas fa-lightbulb me-2 text-brand"></i>
                         <small><strong>Mẹo ngâm sườn:</strong> Hãy ngâm sườn trong nước cho sườn nở hết.</small>
@@ -117,8 +142,10 @@
                             <div class="step-number">1</div>
                             <div class="step-content">
                                 <h6 class="fw-bold">Sơ chế nguyên liệu</h6>
-                                <p class="text-muted">Sườn non chay bạn ngâm vào nước lạnh khoảng 30 phút để chúng mềm và nở ra.
-                                    Sả bạn lặt bỏ phần lá già, cắt bỏ phần gốc rễ, rửa sạch rồi cắt băm nhỏ. Ớt thì lặt bỏ vỏ, rửa sạch rồi băm nhỏ.</p>
+                                <p class="text-muted">Sườn non chay bạn ngâm vào nước lạnh khoảng 30 phút để chúng mềm
+                                    và nở ra.
+                                    Sả bạn lặt bỏ phần lá già, cắt bỏ phần gốc rễ, rửa sạch rồi cắt băm nhỏ. Ớt thì lặt
+                                    bỏ vỏ, rửa sạch rồi băm nhỏ.</p>
                             </div>
                         </div>
 
@@ -126,14 +153,18 @@
                             <div class="step-number">2</div>
                             <div class="step-content">
                                 <h6 class="fw-bold">Ướp sườn non chay</h6>
-                                <p class="text-muted">Sau 30 phút, bạn vắt nước thật sạch rồi cho vào đĩa, 
-                                    cẩn thận xé thành từng thớ nhỏ. Bạn ướp vào 1/3 muỗng cà phê bột ngọt, 
+                                <p class="text-muted">Sau 30 phút, bạn vắt nước thật sạch rồi cho vào đĩa,
+                                    cẩn thận xé thành từng thớ nhỏ. Bạn ướp vào 1/3 muỗng cà phê bột ngọt,
                                     1/3 muỗng cà phê đường và 1/3 muỗng cà phê muối, trộn thật đều.
                                     Rắc thêm 1/3 muỗng cà phê tiêu và ướp trong 15 phút.</p>
-                                <img src="/Image/Thực phẩm/uop-suon-non-chay.jpg" class="img-fluid rounded-3 mt-2 mb-2" style="max-width: 300px;">
-                                <img src="/Image/Thực phẩm/uop-suon-non-chay-1.jpg" class="img-fluid rounded-3 mt-2 mb-2" style="max-width: 300px;">
-                                <img src="/Image/Thực phẩm/uop-suon-non-chay-2.jpg" class="img-fluid rounded-3 mt-2 mb-2" style="max-width: 300px;">
-                                <img src="/Image/Thực phẩm/uop-suon-non-chay-3.jpg" class="img-fluid rounded-3 mt-2 mb-2" style="max-width: 300px;">     
+                                <img src="/Image/Thực phẩm/uop-suon-non-chay.jpg" class="img-fluid rounded-3 mt-2 mb-2"
+                                    style="max-width: 300px;">
+                                <img src="/Image/Thực phẩm/uop-suon-non-chay-1.jpg"
+                                    class="img-fluid rounded-3 mt-2 mb-2" style="max-width: 300px;">
+                                <img src="/Image/Thực phẩm/uop-suon-non-chay-2.jpg"
+                                    class="img-fluid rounded-3 mt-2 mb-2" style="max-width: 300px;">
+                                <img src="/Image/Thực phẩm/uop-suon-non-chay-3.jpg"
+                                    class="img-fluid rounded-3 mt-2 mb-2" style="max-width: 300px;">
                             </div>
                         </div>
 
@@ -141,29 +172,40 @@
                             <div class="step-number">3</div>
                             <div class="step-content">
                                 <h6 class="fw-bold">Chiên sườn non</h6>
-                                <p class="text-muted">Bắc chảo lên bếp, cho vào 100ml dầu ăn, 
+                                <p class="text-muted">Bắc chảo lên bếp, cho vào 100ml dầu ăn,
                                     đợi dầu nóng thì bạn lần lượt gắp sườn non vào chiên vàng giòn đều 2 mặt.
-                                    Sau khi chiên khoảng 7 phút, sườn non đã có màu vàng nâu, 
+                                    Sau khi chiên khoảng 7 phút, sườn non đã có màu vàng nâu,
                                     giòn đều 2 mặt thì bạn cẩn thận gắp ra đĩa.</p>
 
-                                    <img src="/Image/Thực phẩm/chien-suon-non.jpg" class="img-fluid rounded-3 mt-2 mb-2" style="max-width: 300px;">
-                                    <img src="/Image/Thực phẩm/chien-suon-non-1.jpg" class="img-fluid rounded-3 mt-2 mb-2" style="max-width: 300px;">
-                                    <img src="/Image/Thực phẩm/chien-suon-non-2.jpg" class="img-fluid rounded-3 mt-2 mb-2" style="max-width: 300px;">
+                                <img src="/Image/Thực phẩm/chien-suon-non.jpg" class="img-fluid rounded-3 mt-2 mb-2"
+                                    style="max-width: 300px;">
+                                <img src="/Image/Thực phẩm/chien-suon-non-1.jpg" class="img-fluid rounded-3 mt-2 mb-2"
+                                    style="max-width: 300px;">
+                                <img src="/Image/Thực phẩm/chien-suon-non-2.jpg" class="img-fluid rounded-3 mt-2 mb-2"
+                                    style="max-width: 300px;">
                             </div>
 
                         </div>
-                        
+
                         <div class="step-item d-flex gap-3">
                             <div class="step-number">4</div>
                             <div class="step-content">
                                 <h6 class="fw-bold">Làm sốt nước mắm và hoàn thành</h6>
-                                <p class="text-muted">Để làm sốt, cho vào chén 1 muỗng canh nước mắm chay, thêm 1 muỗng canh nước và 1/3 muỗng canh bột ngọt, khuấy đều.
-                                    Tiếp tục bắc chảo lúc nãy bạn dùng để chiên sườn non lên, đợi dầu nóng thì cho hỗn hợp sả và ớt vào, đảo đều tay khoảng 2 phút thì đổ nước mắm vào, thêm vào 2 muỗng đường.
-                                    Đợi nấu thêm khoảng 3 phút nữa thì bạn cho phần sườn non vào, xào khoảng 5 phút thì phần nước mắm dần sệt lại thì tắt bếp.</p>
-                                    <img src="/Image/Thực phẩm/lam-sot-nuoc-mam-va-hoan-thanh.jpg" class="img-fluid rounded-3 mt-2 mb-2" style="max-width: 300px;">
-                                    <img src="/Image/Thực phẩm/lam-sot-nuoc-mam-va-hoan-thanh-1.jpg" class="img-fluid rounded-3 mt-2 mb-2" style="max-width: 300px;">
-                                    <img src="/Image/Thực phẩm/lam-sot-nuoc-mam-va-hoan-thanh-2.jpg" class="img-fluid rounded-3 mt-2 mb-2" style="max-width: 300px;">
-                                    <img src="/Image/Thực phẩm/lam-sot-nuoc-mam-va-hoan-thanh-3.jpg" class="img-fluid rounded-3 mt-2 mb-2" style="max-width: 300px;">
+                                <p class="text-muted">Để làm sốt, cho vào chén 1 muỗng canh nước mắm chay, thêm 1 muỗng
+                                    canh nước và 1/3 muỗng canh bột ngọt, khuấy đều.
+                                    Tiếp tục bắc chảo lúc nãy bạn dùng để chiên sườn non lên, đợi dầu nóng thì cho hỗn
+                                    hợp sả và ớt vào, đảo đều tay khoảng 2 phút thì đổ nước mắm vào, thêm vào 2 muỗng
+                                    đường.
+                                    Đợi nấu thêm khoảng 3 phút nữa thì bạn cho phần sườn non vào, xào khoảng 5 phút thì
+                                    phần nước mắm dần sệt lại thì tắt bếp.</p>
+                                <img src="/Image/Thực phẩm/lam-sot-nuoc-mam-va-hoan-thanh.jpg"
+                                    class="img-fluid rounded-3 mt-2 mb-2" style="max-width: 300px;">
+                                <img src="/Image/Thực phẩm/lam-sot-nuoc-mam-va-hoan-thanh-1.jpg"
+                                    class="img-fluid rounded-3 mt-2 mb-2" style="max-width: 300px;">
+                                <img src="/Image/Thực phẩm/lam-sot-nuoc-mam-va-hoan-thanh-2.jpg"
+                                    class="img-fluid rounded-3 mt-2 mb-2" style="max-width: 300px;">
+                                <img src="/Image/Thực phẩm/lam-sot-nuoc-mam-va-hoan-thanh-3.jpg"
+                                    class="img-fluid rounded-3 mt-2 mb-2" style="max-width: 300px;">
                             </div>
                         </div>
 
@@ -171,12 +213,17 @@
                             <div class="step-number">5</div>
                             <div class="step-content">
                                 <h6 class="fw-bold">Thành phẩm</h6>
-                                <p class="text-muted">Sườn non chay chiên nước mắm sả ớt hấp dẫn với hình thức bắt mắt, hương thơm nồng nàn cùng vị ngon đậm đà,
-                                     đầy lôi cuốn. Món ăn hòa quyện hài hòa giữa vị ngọt, cay mặn mà đầy hấp dẫn.</p>
-                                    <img src="/Image/Thực phẩm/thanh-pham-968.jpg" class="img-fluid rounded-3 mt-2 mb-2" style="max-width: 300px;">
-                                    <img src="/Image/Thực phẩm/thanh-pham-969.jpg" class="img-fluid rounded-3 mt-2 mb-2" style="max-width: 300px;">
-                                    <img src="/Image/Thực phẩm/thanh-pham-970.jpg" class="img-fluid rounded-3 mt-2 mb-2" style="max-width: 300px;">
-                                    <img src="/Image/Thực phẩm/thanh-pham-971.jpg" class="img-fluid rounded-3 mt-2 mb-2" style="max-width: 300px;">
+                                <p class="text-muted">Sườn non chay chiên nước mắm sả ớt hấp dẫn với hình thức bắt mắt,
+                                    hương thơm nồng nàn cùng vị ngon đậm đà,
+                                    đầy lôi cuốn. Món ăn hòa quyện hài hòa giữa vị ngọt, cay mặn mà đầy hấp dẫn.</p>
+                                <img src="/Image/Thực phẩm/thanh-pham-968.jpg" class="img-fluid rounded-3 mt-2 mb-2"
+                                    style="max-width: 300px;">
+                                <img src="/Image/Thực phẩm/thanh-pham-969.jpg" class="img-fluid rounded-3 mt-2 mb-2"
+                                    style="max-width: 300px;">
+                                <img src="/Image/Thực phẩm/thanh-pham-970.jpg" class="img-fluid rounded-3 mt-2 mb-2"
+                                    style="max-width: 300px;">
+                                <img src="/Image/Thực phẩm/thanh-pham-971.jpg" class="img-fluid rounded-3 mt-2 mb-2"
+                                    style="max-width: 300px;">
                             </div>
                         </div>
                     </div>
@@ -187,7 +234,7 @@
                         <div class="section-icon me-3"><i class="fas fa-comments"></i></div>
                         <h4 class="fw-bold text-brand m-0">Đánh Giá Từ Cộng Đồng</h4>
                     </div>
-                
+
                     <div class="review-summary bg-light rounded-3 p-4 mb-5">
                         <div class="row align-items-center">
                             <div class="col-md-4 text-center border-end border-secondary border-opacity-10">
@@ -201,40 +248,47 @@
                                 </div>
                                 <p class="text-muted small mb-0">Dựa trên 120 đánh giá</p>
                             </div>
-                            
+
                             <div class="col-md-8 ps-md-4 mt-3 mt-md-0">
                                 <div class="d-flex align-items-center mb-2">
-                                    <span class="text-muted small me-2 fw-bold" style="width: 30px">5 <i class="fas fa-star text-warning" style="font-size: 10px"></i></span>
+                                    <span class="text-muted small me-2 fw-bold" style="width: 30px">5 <i
+                                            class="fas fa-star text-warning" style="font-size: 10px"></i></span>
                                     <div class="progress flex-grow-1 rounded-pill" style="height: 8px;">
                                         <div class="progress-bar bg-brand" role="progressbar" style="width: 80%"></div>
                                     </div>
                                     <span class="text-muted small ms-2" style="width: 40px">80%</span>
                                 </div>
                                 <div class="d-flex align-items-center mb-2">
-                                    <span class="text-muted small me-2 fw-bold" style="width: 30px">4 <i class="fas fa-star text-warning" style="font-size: 10px"></i></span>
+                                    <span class="text-muted small me-2 fw-bold" style="width: 30px">4 <i
+                                            class="fas fa-star text-warning" style="font-size: 10px"></i></span>
                                     <div class="progress flex-grow-1 rounded-pill" style="height: 8px;">
-                                        <div class="progress-bar bg-brand opacity-75" role="progressbar" style="width: 15%"></div>
+                                        <div class="progress-bar bg-brand opacity-75" role="progressbar"
+                                            style="width: 15%"></div>
                                     </div>
                                     <span class="text-muted small ms-2" style="width: 40px">15%</span>
                                 </div>
                                 <div class="d-flex align-items-center mb-2">
-                                    <span class="text-muted small me-2 fw-bold" style="width: 30px">3 <i class="fas fa-star text-warning" style="font-size: 10px"></i></span>
+                                    <span class="text-muted small me-2 fw-bold" style="width: 30px">3 <i
+                                            class="fas fa-star text-warning" style="font-size: 10px"></i></span>
                                     <div class="progress flex-grow-1 rounded-pill" style="height: 8px;">
-                                        <div class="progress-bar bg-brand opacity-50" role="progressbar" style="width: 5%"></div>
+                                        <div class="progress-bar bg-brand opacity-50" role="progressbar"
+                                            style="width: 5%"></div>
                                     </div>
                                     <span class="text-muted small ms-2" style="width: 40px">5%</span>
                                 </div>
-                                 <div class="d-flex align-items-center">
-                                    <span class="text-muted small me-2 fw-bold" style="width: 30px">2 <i class="fas fa-star text-warning" style="font-size: 10px"></i></span>
+                                <div class="d-flex align-items-center">
+                                    <span class="text-muted small me-2 fw-bold" style="width: 30px">2 <i
+                                            class="fas fa-star text-warning" style="font-size: 10px"></i></span>
                                     <div class="progress flex-grow-1 rounded-pill" style="height: 8px;">
-                                        <div class="progress-bar bg-secondary opacity-25" role="progressbar" style="width: 0%"></div>
+                                        <div class="progress-bar bg-secondary opacity-25" role="progressbar"
+                                            style="width: 0%"></div>
                                     </div>
                                     <span class="text-muted small ms-2" style="width: 40px">0%</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                
+
                     <div class="mb-5 pb-4 border-bottom">
                         <h6 class="fw-bold mb-3">Gửi đánh giá của bạn</h6>
                         <form>
@@ -250,65 +304,80 @@
                                 <input type="hidden" id="ratingValue" value="0">
                             </div>
                             <div class="mb-3">
-                                <textarea class="form-control bg-light border-0 rounded-3 p-3" rows="3" placeholder="Chia sẻ cảm nhận của bạn về món ăn này (Ví dụ: Vị rất vừa, dễ làm...)" style="resize: none;"></textarea>
+                                <textarea class="form-control bg-light border-0 rounded-3 p-3" rows="3"
+                                    placeholder="Chia sẻ cảm nhận của bạn về món ăn này (Ví dụ: Vị rất vừa, dễ làm...)"
+                                    style="resize: none;"></textarea>
                             </div>
                             <div class="text-end">
-                                <button type="button" class="btn btn-brand rounded-pill px-4 fw-bold">Gửi Đánh Giá</button>
+                                <button type="button" class="btn btn-brand rounded-pill px-4 fw-bold">Gửi Đánh
+                                    Giá</button>
                             </div>
                         </form>
                     </div>
-                
+
                     <div class="review-list">
                         <h6 class="fw-bold mb-4">Bình luận mới nhất (24)</h6>
-                        
+
                         <div class="d-flex gap-3 mb-4">
-                            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60" class="user-avatar rounded-circle" alt="User">
+                            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60"
+                                class="user-avatar rounded-circle" alt="User">
                             <div class="bg-light rounded-3 p-3 w-100">
                                 <div class="d-flex justify-content-between align-items-center mb-1">
                                     <h6 class="fw-bold mb-0 text-dark">Nguyễn Văn A</h6>
                                     <small class="text-muted">2 ngày trước</small>
                                 </div>
                                 <div class="mb-2 text-warning small">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
                                 </div>
-                                <p class="text-secondary mb-2 small">Công thức rất chuẩn, mình làm lần đầu mà thành công luôn. Bánh giòn tan, nước chấm pha theo tỉ lệ này rất vừa miệng!</p>
-                                
+                                <p class="text-secondary mb-2 small">Công thức rất chuẩn, mình làm lần đầu mà thành công
+                                    luôn. Bánh giòn tan, nước chấm pha theo tỉ lệ này rất vừa miệng!</p>
+
                                 <div class="d-flex gap-3 small">
-                                    <a href="#" class="text-decoration-none text-muted hover-brand"><i class="far fa-thumbs-up me-1"></i>Hữu ích (12)</a>
-                                    <a href="#" class="text-decoration-none text-muted hover-brand"><i class="far fa-comment-dots me-1"></i>Trả lời</a>
+                                    <a href="#" class="text-decoration-none text-muted hover-brand"><i
+                                            class="far fa-thumbs-up me-1"></i>Hữu ích (12)</a>
+                                    <a href="#" class="text-decoration-none text-muted hover-brand"><i
+                                            class="far fa-comment-dots me-1"></i>Trả lời</a>
                                 </div>
                             </div>
                         </div>
-                
+
                         <div class="d-flex gap-3 mb-4">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60" class="user-avatar rounded-circle" alt="User">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60"
+                                class="user-avatar rounded-circle" alt="User">
                             <div class="bg-light rounded-3 p-3 w-100">
                                 <div class="d-flex justify-content-between align-items-center mb-1">
                                     <h6 class="fw-bold mb-0 text-dark">Trần Thị B</h6>
                                     <small class="text-muted">1 tuần trước</small>
                                 </div>
                                 <div class="mb-2 text-warning small">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="far fa-star"></i>
                                 </div>
-                                <p class="text-secondary mb-2 small">Món ăn ngon nhưng phần bột hơi khó pha một chút, cần chú ý lượng nước nếu không sẽ bị nhão.</p>
+                                <p class="text-secondary mb-2 small">Món ăn ngon nhưng phần bột hơi khó pha một chút,
+                                    cần chú ý lượng nước nếu không sẽ bị nhão.</p>
                                 <div class="d-flex gap-3 small">
-                                    <a href="#" class="text-decoration-none text-muted hover-brand"><i class="far fa-thumbs-up me-1"></i>Hữu ích (5)</a>
-                                    <a href="#" class="text-decoration-none text-muted hover-brand"><i class="far fa-comment-dots me-1"></i>Trả lời</a>
+                                    <a href="#" class="text-decoration-none text-muted hover-brand"><i
+                                            class="far fa-thumbs-up me-1"></i>Hữu ích (5)</a>
+                                    <a href="#" class="text-decoration-none text-muted hover-brand"><i
+                                            class="far fa-comment-dots me-1"></i>Trả lời</a>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="text-center mt-4">
-                            <button class="btn btn-outline-brand rounded-pill px-4 text-decoration-none fw-bold small">Xem thêm bình luận <i class="fas fa-chevron-down ms-1"></i></button>
+                            <button
+                                class="btn btn-outline-brand rounded-pill px-4 text-decoration-none fw-bold small">Xem
+                                thêm bình luận <i class="fas fa-chevron-down ms-1"></i></button>
                         </div>
                     </div>
                 </div>
-                
-                
+
+
             </div>
 
             <div class="col-lg-4">
-                
+
                 <div class="bg-white rounded-4 shadow-sm p-4 mb-4 border-top border-4 border-success">
                     <h5 class="fw-bold text-dark mb-3">Thông Tin Dinh Dưỡng</h5>
                     <div class="nutrition-table">
@@ -333,9 +402,10 @@
 
                 <div class="bg-white rounded-4 shadow-sm p-4 sticky-top" style="top: 100px; z-index: 1;">
                     <h5 class="fw-bold text-brand mb-3">Món Ngon Liên Quan</h5>
-                    
+
                     <a href="#" class="d-flex text-decoration-none text-dark mb-3 group-hover">
-                        <img src="Image/Món ăn/Chả giò chay.JPG" class="rounded-3 me-3" width="80" height="80" style="object-fit:cover">
+                        <img src="Image/Món ăn/Chả giò chay.JPG" class="rounded-3 me-3" width="80" height="80"
+                            style="object-fit:cover">
                         <div>
                             <h6 class="mb-1 fw-bold small">Chả giò chay</h6>
                             <small class="text-muted"><i class="fas fa-clock text-brand me-1"></i>20p</small>
@@ -343,7 +413,8 @@
                     </a>
 
                     <a href="#" class="d-flex text-decoration-none text-dark mb-3 group-hover">
-                        <img src="Image/Món ăn/Chả trứng hấp chay.JPG" class="rounded-3 me-3" width="80" height="80" style="object-fit:cover">
+                        <img src="Image/Món ăn/Chả trứng hấp chay.JPG" class="rounded-3 me-3" width="80" height="80"
+                            style="object-fit:cover">
                         <div>
                             <h6 class="mb-1 fw-bold small">Chả trứng hấp chay</h6>
                             <small class="text-muted"><i class="fas fa-clock text-brand me-1"></i>30p</small>
@@ -355,24 +426,24 @@
         </div>
 
         <div class="related-recipes-section py-5 mt-4 border-top position-relative">
-    
+
             <div class="text-center mb-5">
                 <h3 class="fw-bold text-dark" style="font-size: 28px;">
                     Công thức <span class="text-brand">bạn có thể thích</span>
                 </h3>
             </div>
-        
+
             <button class="slider-btn btn-prev">
                 <i class="fas fa-chevron-left"></i>
             </button>
-        
+
             <div class="row g-4">
-                
+
                 <div class="col-xl-3 col-lg-4 col-md-6">
                     <div class="card h-100 border-0 bg-transparent food-card-detail">
                         <div class="card-img-box position-relative">
                             <img src="Image/Món ăn/Cà tím chiên mắm.JPG" class="card-img-top" alt="Món ăn">
-                            
+
                             <div class="badge-logo-green">
                                 <img src="/Image/logo/Asset 2@5x.png">
                             </div>
@@ -385,11 +456,12 @@
                                 <span class="info-tag"><i class="fas fa-fire text-brand"></i> Dễ</span>
                                 <span class="info-tag"><i class="fas fa-clock text-brand"></i> 15p</span>
                             </div>
-                            <a href="#" class="btn btn-detail-green w-100 mt-2">XEM CHI TIẾT <i class="fas fa-chevron-right ms-1 small"></i></a>
+                            <a href="#" class="btn btn-detail-green w-100 mt-2">XEM CHI TIẾT <i
+                                    class="fas fa-chevron-right ms-1 small"></i></a>
                         </div>
                     </div>
                 </div>
-        
+
                 <div class="col-xl-3 col-lg-4 col-md-6">
                     <div class="card h-100 border-0 bg-transparent food-card-detail">
                         <div class="card-img-box position-relative">
@@ -406,11 +478,12 @@
                                 <span class="info-tag"><i class="fas fa-fire text-brand"></i> TB</span>
                                 <span class="info-tag"><i class="fas fa-clock text-brand"></i> 30p</span>
                             </div>
-                            <a href="#" class="btn btn-detail-green w-100 mt-2">XEM CHI TIẾT <i class="fas fa-chevron-right ms-1 small"></i></a>
+                            <a href="#" class="btn btn-detail-green w-100 mt-2">XEM CHI TIẾT <i
+                                    class="fas fa-chevron-right ms-1 small"></i></a>
                         </div>
                     </div>
                 </div>
-        
+
                 <div class="col-xl-3 col-lg-4 col-md-6">
                     <div class="card h-100 border-0 bg-transparent food-card-detail">
                         <div class="card-img-box position-relative">
@@ -427,11 +500,12 @@
                                 <span class="info-tag"><i class="fas fa-fire text-brand"></i> Dễ</span>
                                 <span class="info-tag"><i class="fas fa-clock text-brand"></i> 45p</span>
                             </div>
-                            <a href="#" class="btn btn-detail-green w-100 mt-2">XEM CHI TIẾT <i class="fas fa-chevron-right ms-1 small"></i></a>
+                            <a href="#" class="btn btn-detail-green w-100 mt-2">XEM CHI TIẾT <i
+                                    class="fas fa-chevron-right ms-1 small"></i></a>
                         </div>
                     </div>
                 </div>
-        
+
                 <div class="col-xl-3 col-lg-4 col-md-6">
                     <div class="card h-100 border-0 bg-transparent food-card-detail">
                         <div class="card-img-box position-relative">
@@ -448,20 +522,21 @@
                                 <span class="info-tag"><i class="fas fa-fire text-brand"></i> Dễ</span>
                                 <span class="info-tag"><i class="fas fa-clock text-brand"></i> 10p</span>
                             </div>
-                            <a href="#" class="btn btn-detail-green w-100 mt-2">XEM CHI TIẾT <i class="fas fa-chevron-right ms-1 small"></i></a>
+                            <a href="#" class="btn btn-detail-green w-100 mt-2">XEM CHI TIẾT <i
+                                    class="fas fa-chevron-right ms-1 small"></i></a>
                         </div>
                     </div>
                 </div>
-        
+
             </div>
-        
+
             <button class="slider-btn btn-next">
                 <i class="fas fa-chevron-right"></i>
             </button>
-        
+
         </div>
 
-        </section>
+    </section>
 
     <div id="footer-placeholder"></div>
 
@@ -470,4 +545,5 @@
     <script src="/JS/script2.js"></script>
     <script src="/JS/xemchitiet.js"></script>
 </body>
+
 </html>

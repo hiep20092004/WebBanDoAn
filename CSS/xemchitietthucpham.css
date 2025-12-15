@@ -1,0 +1,80 @@
+/* --- STYLE TRANG CHI TIẾT NGUYÊN LIỆU --- */
+
+:root {
+    --brand-color: rgb(0, 102, 51); /* Màu xanh chủ đạo */
+    --text-color: #333;
+    --border-radius-card: 20px;
+}
+
+/* 1. Hero Card (Khung Ảnh Lớn) */
+.ingredient-hero-card {
+    border: 3px solid var( --brand-color); /* Trong ảnh là màu xanh dương sáng (#2196F3) */
+    /* Nếu muốn đồng bộ Green Theme thì đổi thành: border: 3px solid var(--brand-color); */
+    
+    border-radius: var(--border-radius-card);
+    overflow: hidden;
+    padding: 0;
+    background-color: #e0e0e0; /* Màu nền xám placeholder */
+    height: 350px; /* Chiều cao cố định */
+}
+
+.ingredient-img-placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    background-color: #dcdcdc; /* Giả lập ảnh xám */
+}
+
+/* 2. Tiêu đề Section (Icon + Text) */
+.info-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: #000;
+    text-transform: uppercase; /* In hoa giống ảnh */
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.info-title i {
+    font-size: 24px;
+    color: #555; /* Icon màu xám đen */
+    border: 2px solid #555; /* Viền icon giống ảnh */
+    padding: 5px;
+    border-radius: 4px;
+    width: 40px; height: 40px;
+    display: flex; align-items: center; justify-content: center;
+}
+
+/* 3. Nội dung văn bản & List */
+.content-text {
+    font-family: 'Roboto', sans-serif; /* Dùng font thường cho dễ đọc */
+    font-size: 16px;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Custom Bullet List (Dấu chấm tròn) */
+.custom-bullet-list {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.custom-bullet-list li {
+    margin-bottom: 8px;
+    list-style-type: disc; /* Dấu chấm tròn đặc */
+}
+
+/* List con bên trong */
+.sub-list {
+    padding-left: 20px;
+    list-style-type: circle; /* Dấu chấm tròn rỗng */
+}
+
+/* 4. Đường gạch ngang phân cách */
+.section-divider {
+    border-top: 1px solid #ccc;
+    margin: 40px 0;
+    opacity: 1;
+}
