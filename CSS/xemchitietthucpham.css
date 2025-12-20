@@ -15,7 +15,8 @@
     overflow: hidden;
     padding: 0;
     background-color: #e0e0e0; /* Màu nền xám placeholder */
-    height: 350px; /* Chiều cao cố định */
+    height: 501px; /* Chiều cao cố định */
+    width: 1240px;
 }
 
 .ingredient-img-placeholder {
@@ -27,10 +28,10 @@
 
 /* 2. Tiêu đề Section (Icon + Text) */
 .info-title {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Barlow Condensed';
     font-weight: 700;
-    font-size: 26px;
-    color: #000;
+    font-size: 40px;
+    color: rgb(0, 102, 51);
     text-transform: uppercase; /* In hoa giống ảnh */
     display: flex;
     align-items: center;
@@ -49,8 +50,8 @@
 
 /* 3. Nội dung văn bản & List */
 .content-text {
-    font-family: 'Roboto', sans-serif; /* Dùng font thường cho dễ đọc */
-    font-size: 16px;
+       font-family: 'Barlow Condensed'; /* Dùng font thường cho dễ đọc */
+    font-size: 30px;
     color: var(--text-color);
     line-height: 1.6;
 }

@@ -3,7 +3,9 @@
 :root {
     --brand-color: rgb(0, 102, 51);
 }
-
+body{
+    background-color: rgb(246,243,238);
+}
 /* 1. Tiêu đề có gạch 2 bên (Tái sử dụng code cũ) */
 .title-with-lines {
     display: flex;
@@ -20,25 +22,44 @@
 .title-with-lines::before,
 .title-with-lines::after {
     content: '';
-    width: 60px; /* Độ dài gạch */
+    width: 160px; /* Độ dài gạch */
     height: 2px;
     background-color: #ccc; /* Màu xám nhạt */
     margin: 0 20px;
 }
-
+/*Logo*/
+.badge-logo-red2, .badge-logo-green2 {
+    position: absolute; top: 30px; left: 30px;
+    width: 45px; height: 45px;
+    background-color: var(--brand-color); /* Chuyển thành Xanh */
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+.badge-logo-red2 img, .badge-logo-green2 img { 
+    width: 30px; 
+    filter: brightness(0) invert(1); /* Logo trắng */ 
+}
 /* 2. Placeholder Hình Ảnh (Màu xám) */
 .gray-placeholder {
-    width: 100%;
-    height: 250px; /* Chiều cao cho ảnh lớn */
-    background-color: #d9d9d9; /* Màu xám giống ảnh */
+    width: 590px;
+    height: 320px; /* Chiều cao cho ảnh lớn */
+    text-align: center;
+    margin: 20px 20px 0px 20px;   /* Căn giữa thẻ card trong cột */
+    display: flex;
     border-radius: 8px;
+    justify-content: center;
 }
 
 .small-placeholder {
-    width: 100%;
-    aspect-ratio: 1/1; /* Hình vuông */
+    width: 378px;
+    height: 220px;
+    margin: 10px 0px 10px 10px;
     background-color: #d9d9d9;
     border-radius: 8px;
+    display: flex;
+    justify-content: center;
 }
 
 /* 3. Typography & Buttons */
@@ -51,8 +72,8 @@
 
 /* Nút "Tiếp tục đọc" có viền bo tròn */
 .btn-outline-custom {
-    border: 1px solid #aaa;
-    color: #333;
+    color: #ffffff;
+    background-color:  rgb(0, 102, 51);
     font-weight: 700;
     font-size: 12px;
     transition: all 0.3s;

@@ -5,14 +5,16 @@
     --brand-light: rgba(0, 102, 51, 0.08); /* Nền xanh nhạt */
 }
 
-.text-brand { color: var(--brand-color) !important; }
-.bg-green-light { background-color: var(--brand-light); }
+.text-brand { color: var(--brand-color) !important; font-size: 40px; }
+.bg-green-light { background-color: rgb(246,243,238); }
 
 /* 1. Header & Buttons */
 .recipe-title {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Barlow Condensed';
     font-weight: 800;
-    color: #222;
+    font-size: 60px;
+    text-align: center;
+    color: rgba(0, 102, 51, 1);
 }
 
 .btn-brand {
@@ -20,6 +22,7 @@
     color: #fff;
     border: 1px solid var(--brand-color);
     font-weight: 600;
+    border-radius: 10px;
     transition: 0.3s;
 }
 .btn-brand:hover {
@@ -111,7 +114,7 @@
 /* Dấu tích V bên trong checkbox */
 .custom-checkbox:checked::after {
     content: '\f00c'; /* Mã unicode icon Check của FontAwesome */
-    font-family: 'Font Awesome 5 Free';
+       font-family: 'Barlow Condensed';
     font-weight: 900;
     color: #fff;
     font-size: 14px;
@@ -140,42 +143,66 @@
     background-color: #f9f9f9; /* Nền xám nhẹ giúp dễ nhìn */
 }
 
-/* --- STYLE PHẦN ĐÁNH GIÁ (REVIEWS) --- */
-
-/* 1. Progress Bar Xanh (Override Bootstrap) */
-.bg-brand {
-    background-color: var(--brand-color) !important; /* Màu xanh lá chủ đạo */
+.card-container {
+    width: 400px;
+    height: 231px;
+    background-color: #f6f4f0; /* Màu nền be nhạt */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Khoảng cách giữa khung trên và nút dưới */
 }
 
-/* 2. Form chọn sao (Star Rating Input) */
-.rating-input i {
-    transition: transform 0.2s;
-}
-.rating-input i:hover {
-    transform: scale(1.2); /* Phóng to khi di chuột */
-    font-weight: 900 !important; /* Đậm lên */
-}
-
-/* 3. Avatar User */
-.user-avatar {
-    width: 45px;
-    height: 45px;
-    object-fit: cover;
-    border: 2px solid #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    flex-shrink: 0;
+/* --- Phần khung trên (Stats) --- */
+.stats-box {
+    flex: 1; /* Chiếm phần lớn chiều cao */
+    display: flex;
+    background-color: rgba(242, 242, 242, 0.79);
+    justify-content: space-around;
+    align-items: center;
 }
 
-/* 4. Tương tác nút nhỏ */
-.hover-brand:hover {
-    color: var(--brand-color) !important;
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
 }
 
-/* Focus vào ô nhập liệu thì viền xanh */
-.review-list textarea:focus, .review-summary textarea:focus {
-    box-shadow: none;
-    border: 1px solid var(--brand-color) !important;
-    background-color: #fff !important;
+.label {
+    font-size: 22px;
+    color: #333;
+    font-weight: lighter;
+}
+
+.value {
+    font-size: 22px;
+
+    color: #000;
+    font-weight: bold; /* Chữ đậm */
+}
+
+/* --- Phần nút dưới (Công thức nhiệt nước) --- */
+.action-box {
+    background-color: white;
+    border-radius: 12px;
+    height: 106px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Bóng mờ nhẹ */
+}
+
+
+.action-text {
+    font-size: 35px;
+    font-weight: bold; /* Rất đậm */
+    color: #000;
+    margin-top: 15px;
+    font-family:'Barlow Condensed'; /* Font hẹp giống hình */
+    letter-spacing: -0.5px;
 }
 
 /* --- STYLE SLIDER GỢI Ý (GREEN THEME) --- */
@@ -254,4 +281,7 @@
 .badge-logo-green img { 
     width: 25px; 
     filter: brightness(0) invert(1); /* Logo trắng */ 
+}
+.text-content{
+    font-size: 30px;
 }

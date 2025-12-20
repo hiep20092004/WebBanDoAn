@@ -14,19 +14,6 @@ $(document).ready(function () {
         }
     });
 
-    // 3. Nút Lưu công thức
-    $('.btn-brand').click(function () {
-        // Demo hiệu ứng đổi text
-        let icon = $(this).find('i');
-        if ($(this).text().includes('Lưu')) {
-            $(this).html('<i class="fas fa-check me-2"></i>Đã lưu');
-            $(this).removeClass('btn-brand').addClass('btn-outline-success');
-        } else {
-            $(this).html('<i class="fas fa-heart me-2"></i>Lưu công thức');
-            $(this).addClass('btn-brand').removeClass('btn-outline-success');
-        }
-    });
-
     $(document).ready(function () {
         // ... (Code cũ giữ nguyên) ...
 

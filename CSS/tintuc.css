@@ -1,0 +1,60 @@
+/* --- STYLE CHO TRANG CHI TIẾT BLOG --- */
+
+:root {
+    --brand-color: rgb(0, 102, 51);
+}
+body{
+    font-family: 'Barlow Condensed';
+}
+
+.text-header { color:  var(--brand-color) !important; font-size: 60px;}
+.text-brand { color:  #333 !important; font-size: 24px; font-style: italic; }
+.btn-brand { background-color: var(--brand-color); color: #fff; border: none; }
+.btn-brand:hover { background-color: #004d26; color: #fff; }
+
+/* 2. Typography Bài viết */
+.article-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 60px;
+    line-height: 1.2;
+}
+
+.recipe-heading {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #333;
+    padding-left: 15px;
+}
+
+/* Link Mục lục */
+.hover-brand {
+    transition: color 0.2s;
+}
+.hover-brand:hover {
+    color: var(--brand-color) !important;
+}
+
+/* 3. Nội dung Recipe */
+.recipe-content ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+    font-size: 24px;
+    position: relative;
+    padding-left: 5px;
+}
+/* Dấu chấm đầu dòng */
+.recipe-content ul {
+    list-style-type: disc;
+    font-size: 24px;
+    padding-left: 20px;
+}
+.menu-text-size{
+    font-size: 24px;
+}
+/* Ảnh minh họa món ăn */
+.recipe-img {
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1); /* Đổ bóng nhẹ cho ảnh */
+    transition: transform 0.3s;
+    max-height: 697px;
+}
