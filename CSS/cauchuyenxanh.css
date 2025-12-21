@@ -1,0 +1,210 @@
+/* --- STYLE TRANG CÂU CHUYỆN XANH --- */
+
+:root {
+    --brand-color: rgb(0, 102, 51);
+    --brand-light: rgba(0, 102, 51, 0.1);
+    --bg-card: rgb(255, 255, 255);
+}
+
+body {
+    background-color: rgb(251, 252, 252);
+}
+
+.text-brand {
+    color: var(--brand-color) !important;
+}
+
+.bg-brand {
+    background-color: var(--brand-color) !important;
+}
+
+.bg-light-green {
+    background-color: #f4fcf6;
+}
+
+/* Nền xanh rất nhạt */
+.bg-light-green-gradient {
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+/* 1. HERO SECTION */
+/* FILE CSS */
+.back-img1 {
+    /* 1. Kiểm tra lại tên thư mục Image viết hoa/thường cho chuẩn xác */
+    background-image: url('../Image/CauChuyenXanh/1.png');
+    
+    /* 2. QUAN TRỌNG: Phải có dòng này ảnh mới co giãn vừa khung */
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    
+
+    /* 3. Chiều cao */
+    height: 612px; 
+    
+    /* 4. Sửa width thành 100% thay vì 1440px */
+    width: 100%; 
+}
+.back-img2 {
+    /* 1. Kiểm tra lại tên thư mục Image viết hoa/thường cho chuẩn xác */
+    background-image: linear-gradient(rgba(155, 191, 145, 0.6), rgba(155, 191, 145, 0.6)), url('../Image/CauChuyenXanh/AdobeStock_214597619-smaller-cropped.webp');
+    
+    /* 2. QUAN TRỌNG: Phải có dòng này ảnh mới co giãn vừa khung */
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* 3. Chiều cao */
+    height: 550px; 
+    
+    /* 4. Sửa width thành 100% thay vì 1440px */
+    width: 100%; 
+}
+
+.back-img3 {
+    /* 1. Kiểm tra lại tên thư mục Image viết hoa/thường cho chuẩn xác */
+    background-image:  url('../Image/CauChuyenXanh/Artboard1@6x.png');
+    
+    /* 2. QUAN TRỌNG: Phải có dòng này ảnh mới co giãn vừa khung */
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* 3. Chiều cao */
+    height: 699px; 
+    
+    /* 4. Sửa width thành 100% thay vì 1440px */
+    width: 100%; 
+}
+.back-img4 {
+    /* 1. Kiểm tra lại tên thư mục Image viết hoa/thường cho chuẩn xác */
+    background-image: linear-gradient(rgba(155, 191, 145, 0.7),rgba(155, 191, 145, 0.7)), url('../Image/CauChuyenXanh/bg4.jpg');
+    /* 2. QUAN TRỌNG: Phải có dòng này ảnh mới co giãn vừa khung */
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 100px;
+    /* 3. Chiều cao */
+    height: 505px; 
+    
+    /* 4. Sửa width thành 100% thay vì 1440px */
+    width: 100%; 
+}
+
+
+
+.hero-img {
+    height: 500px;
+}
+
+.benefit-item h5{
+    color: var(--brand-color);
+    font-size: 40px;
+}
+.benefit-item p{
+    font-size: 24px;
+}
+.text-content{
+    font-size: 24px;
+}
+/* 3. card */
+.diet-card {
+    position: relative; /* Làm mốc tọa độ cho tiêu đề */
+    border: 2px solid var(--brand-color); /* Viền xanh 2px */
+    border-radius: 20px; /* Bo góc tròn trịa */
+    background-color: var(--bg-card);
+    width: 690px;
+    padding: 20px 15px 15px 15px; /* Padding-top lớn để chữ không đụng tiêu đề */
+    box-shadow: 0 5px 15px rgba(0, 102, 51, 0.05); /* Bóng đổ rất nhẹ */
+    transition: transform 0.3s ease;
+}
+
+/* TIÊU ĐỀ NẰM TRÊN VIỀN */
+.diet-title {
+    position: absolute;
+    top: -18px; /* Kéo lên trên để đè lên viền (Cần chỉnh tùy theo cỡ chữ) */
+    left: 40px; /* Cách lề trái */
+    
+    background-color: var(--bg-card); /* Nền trắng che viền */
+    padding: 0 15px; /* Khoảng trắng 2 bên chữ */
+    
+    color: var(--brand-color);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: bold; /* Chữ siêu đậm */
+    text-transform: uppercase;
+    font-size: 36px;
+    letter-spacing: 1px;
+    margin: 0;
+    line-height: 1; /* Giảm chiều cao dòng để căn chỉnh chính xác */
+}
+
+/* NỘI DUNG MÔ TẢ */
+.diet-desc {
+    color: var(--text-color);
+    font-size: 24px;
+    margin: 0;
+}
+
+.tree-item:hover {
+    transform: translateX(10px);
+    border-color: var(--brand-color) !important;
+}
+
+/* Đường nối (Connector) */
+.connector-line {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    width: 20px;
+    height: 2px;
+    background-color: #ccc;
+    display: none;
+    /* Ẩn trên mobile */
+}
+
+@media (min-width: 992px) {
+    .connector-line {
+        display: block;
+    }
+
+    /* Đường nối dọc lớn bên phải để nối vào ảnh trung tâm (Demo visual) */
+    .tree-branch-container {
+        border-right: 2px dashed #ccc;
+        padding-right: 20px;
+    }
+}
+
+/* 4. GALLERY IMAGES */
+.gallery-img {
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* 5. LIST BOTTOM */
+.custom-list-check li {
+    margin-bottom: 12px;
+    font-size: 24px;
+    color: #555;
+}
+
+/* 6. ROTATE IMAGE ANIMATION */
+@keyframes slowRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate-img {
+    /* Xoay ảnh đĩa salad chậm chậm cho sinh động */
+    animation: slowRotate 60s linear infinite;
+}
